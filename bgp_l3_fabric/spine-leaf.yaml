@@ -17,7 +17,7 @@
       config: "{{sonic_l3_interfaces}}"
     when: sonic_l3_interfaces is defined and sonic_l3_interfaces
 
-  - name: "Push configs for clos-fabric usecase"
+  - name: "Push configs for spine-leaf usecase"
     vars:
       ansible_connection: network_cli
     sonic_config:
