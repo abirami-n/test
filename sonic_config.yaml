@@ -1,0 +1,13 @@
+---
+- hosts: datacenter
+  connection: network_cli
+  gather_facts: no
+  collections:
+     - dellemc.enterprise_sonic
+  tasks:
+
+  - name: "Configure interface description using 'parents' option on SONiC device"
+    sonic_config:
+      lines:
+        - description "hi"
+      parents: ['interface Ethernet 60']
