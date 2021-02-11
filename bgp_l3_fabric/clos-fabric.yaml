@@ -4,6 +4,8 @@
   gather_facts: no
   collections:
      - dellemc.enterprise_sonic
+  environment:
+    ansible_network_group_modules: sonic
   tasks:
   - name: Create Interfaces
     sonic_interfaces:
