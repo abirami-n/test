@@ -10,4 +10,4 @@
     sonic_config:
       lines:
         - description "hi"
-      parents: ['interface Ethernet 60']
+      parents: ['interface Eth1/1/1']
