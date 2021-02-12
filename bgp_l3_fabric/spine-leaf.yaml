@@ -17,13 +17,6 @@
       config: "{{sonic_l3_interfaces}}"
     when: sonic_l3_interfaces is defined and sonic_l3_interfaces
 
-  - name: "Push configs for spine-leaf usecase"
-    vars:
-      ansible_connection: network_cli
-    sonic_config:
-      src: clos_fabric_cfg.j2
-    register: result
-
   - name: Create BGP configuration
     sonic_bgp:
       config: "{{sonic_bgp}}"
